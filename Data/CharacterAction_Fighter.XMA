@@ -1,0 +1,65 @@
+<C9ActionFile>
+	<ActionData AnimationSpeed="1.0" ShadowmapZbias="-0.01" ShadowmapSlope="0.0" Shadowtargetsize="-0.0098" CollisionType="PC" SuperArmorBreak="10">
+		<Bone>pk0000.r3cb</Bone>
+		<AnimationPack>pk01_AnimationPack.xmap</AnimationPack>
+		
+		<Mesh MiddleCategory="GLOVE">pk0000_hand.r3cm GLOVE</Mesh>
+		<Mesh MiddleCategory="FOOTWEAR">pk0000_foot.r3cm FOOTWEAR</Mesh>
+		<Mesh MiddleCategory="JACKET">pk0000_body.r3cm JACKET</Mesh>		
+		<Mesh MiddleCategory="PANTS">pk0000_leg.r3cm PANTS</Mesh>
+		<Mesh>pk0000_head.r3cm FACE</Mesh>		
+		<Mesh>pk0000_hair.r3cm HAIR</Mesh>
+		<Mesh>pk0000_eye.r3cm EYE</Mesh>
+		<Mesh>pk0000_eyeLine.r3cm EYE_LINE</Mesh>
+		<Mesh MiddleCategory="WEAPON_MLR">pk01_000_2.r3cm WEAPON_R</Mesh>		
+		<Mesh MiddleCategory="ARMOR_L">pk03_001_2.r3cm WEAPON_L</Mesh>		
+		
+		<Mesh_Siege>pk0000_G.r3cm </Mesh_Siege>
+		<Mesh_Siege>pk01_000_2.r3cm WEAPON_R</Mesh_Siege>
+		<Mesh_Siege>pk03_005_2.r3cm WEAPON_L</Mesh_Siege>
+		
+		
+		<!--<PreC9ParticleLoad Type="Effect" Frame="0" EffectFile="eff_mon_bon_R_sword00.XME" Bone="b_Weapon_R" Scale=" 1.0 1.0 1.0" LocalPosition="0 30 0" Rotation="0 0 0" Index="0" ></PreC9ParticleLoad>-->
+		<PreC9ParticleLoad Index="0" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 L Clavicle" Scale="0.6 0.6 0.6" LocalPosition="20 -20.0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="1" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 R Clavicle" Scale="0.6 0.6 0.6" LocalPosition="20 20.0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="2" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 Spine2" Scale="0.8 0.8 0.8" LocalPosition="0 0.0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="3" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 L Forearm" Scale="0.5 0.5 0.5" LocalPosition="20 0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="4" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 R Forearm" Scale="0.5 0.5 0.5" LocalPosition="20 0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="5" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 L Calf" Scale="0.45 0.45 0.45" LocalPosition="50 0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="6" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 R Calf" Scale="0.45 0.45 0.45" LocalPosition="50 0 0" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="7" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 L Thigh" Scale="0.6 0.6 0.6" LocalPosition="40 10 -10" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+		<PreC9ParticleLoad Index="8" Type="Effect" Frame="0" EffectFile="eff_pk_skill_R_attbomb_00.XME" Bone="Bip01 R Thigh" Scale="0.6 0.6 0.6" LocalPosition="40 -10 -10" Rotation="0 0 0" ControlState="STOP"></PreC9ParticleLoad>
+	</ActionData>
+	
+		
+	
+	<!--전방으로 달리기-->
+	<Action AnimationName="F_MOVE" MoveSpeed="580" MoveDirection="0" AddDirection="Toward" FallCancel="FallFront" UseSkill="Normal" AddSpeedRate="Move" ActionType="MoveForward" AnimationSpeed="1.2">
+		F_MOVE
+		
+		<!--마나커튼-->
+		<ActionBranch InputTiming="Section 0 99" Input="W+Q" BlendTime="5" SkillType="1162" UseSkillLevelName="False" CheckSkill="True">SKILL_ManaCurtain</ActionBranch>
+		
+		
+		<ActionBranch InputTiming="Entire" Input="EVENT" BlendTime="5">EVENT_ACTION</ActionBranch>		
+		<ActionBranch InputTiming="None" Input="None" BlendTime="5" >WAIT</ActionBranch>
+		<ActionBranch InputTiming="None" Input="SHIFT" BlendTime="5" >WAIT</ActionBranch>
+		
+		<!-- SOUND -->		
+
+		<!-- 기본 이동 보내기 -->		
+		<ActionBranch InputTiming="Entire" Input="A" BlendTime="5">L_MOVE</ActionBranch>
+		<ActionBranch InputTiming="Entire" Input="D" BlendTime="5">R_MOVE</ActionBranch>	
+		<ActionBranch InputTiming="Entire" Input="S" BlendTime="5">B_MOVE</ActionBranch>
+		
+		<ActionBranch InputTiming="Entire" Input="S+A" BlendTime="5">B_MOVE</ActionBranch>
+		<ActionBranch InputTiming="Entire" Input="S+D" BlendTime="5">B_MOVE</ActionBranch>			
+		<!-- 전승기 / 다이아몬드 크라운 끝 보내기 -->
+		<ActionBranch InputTiming="Entire" Input="PTIMER" TimerName="CrownTimer" TimerOperation=">=" TimerTime="40" BlendTime="5">DiamondCrown_Finish</ActionBranch>
+		<ActionBackGroundBranch InputTiming="Entire" Input="PSVALUE" PSValueName="Crystal" PSValue="0" PSOperation=">=" BlendTime="5">MANACRAFTING_FUNC</ActionBackGroundBranch>
+		<ActionEnd>F_MOVE</ActionEnd>		
+	</Action>		
+	
+	
+	
+</C9ActionFile><!--END-->

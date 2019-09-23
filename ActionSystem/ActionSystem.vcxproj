@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B16AB9B-7B2B-4EAC-BAF3-F6D2406629C0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ActionSystem</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\External\DirectX11_SDK\Include;..\External\boost_1_65_1\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>d3d11.lib;d3dx11d.lib;d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>..\External\DirectX11_SDK\Lib\x64;..\External\boost_1_65_1\lib64-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>..\Lib\$(ProjectName)_$(Configuration).lib</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionBackGroundBranch.h" />
+    <ClInclude Include="ActionBranch.h" />
+    <ClInclude Include="ActionChart.h" />
+    <ClInclude Include="ActionContantable.h" />
+    <ClInclude Include="ActionData.h" />
+    <ClInclude Include="ActionDataInfo.h" />
+    <ClInclude Include="ActionDefine.h" />
+    <ClInclude Include="AIActionChart.h" />
+    <ClInclude Include="AIActionChart_Attack.h" />
+    <ClInclude Include="AIActionChart_RotationTarget.h" />
+    <ClInclude Include="AIActionChart_RunTarget.h" />
+    <ClInclude Include="AIActionChart_Wait.h" />
+    <ClInclude Include="AIActionChart_WalkRandom.h" />
+    <ClInclude Include="AIActionData.h" />
+    <ClInclude Include="AICondition.h" />
+    <ClInclude Include="AICondition_CheckAreaRange.h" />
+    <ClInclude Include="AICondition_CheckTargetRange.h" />
+    <ClInclude Include="AICondition_Random.h" />
+    <ClInclude Include="AICondition_SearchAttackTarget.h" />
+    <ClInclude Include="AIConditoin_CheckTargetStates.h" />
+    <ClInclude Include="AIExcute.h" />
+    <ClInclude Include="AIExecute_RunAIAction.h" />
+    <ClInclude Include="AIExecute_RunTimer.h" />
+    <ClInclude Include="AIExecute_SetActionIndex.h" />
+    <ClInclude Include="AIExecute_SetSkillTimer.h" />
+    <ClInclude Include="FrameEventAttackBow.h" />
+    <ClInclude Include="FrameEventAttackRange.h" />
+    <ClInclude Include="FrameEventCameraShake.h" />
+    <ClInclude Include="FrameEventDefine.h" />
+    <ClInclude Include="ActionFunction.h" />
+    <ClInclude Include="FrameEvent.h" />
+    <ClInclude Include="FrameEventAttackNormal.h" />
+    <ClInclude Include="FrameEventEffect.h" />
+    <ClInclude Include="FrameEventSkill.h" />
+    <ClInclude Include="FrameEventSound.h" />
+    <ClInclude Include="FrameEventSwordTrail.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionBackGroundBranch.cpp" />
+    <ClCompile Include="ActionBranch.cpp" />
+    <ClCompile Include="ActionChart.cpp" />
+    <ClCompile Include="ActionContantable.cpp" />
+    <ClCompile Include="ActionData.cpp" />
+    <ClCompile Include="ActionDataInfo.cpp" />
+    <ClCompile Include="AIActionChart.cpp" />
+    <ClCompile Include="AIActionChart_Attack.cpp" />
+    <ClCompile Include="AIActionChart_RotationTarget.cpp" />
+    <ClCompile Include="AIActionChart_RunTarget.cpp" />
+    <ClCompile Include="AIActionChart_Wait.cpp" />
+    <ClCompile Include="AIActionChart_WalkRandom.cpp" />
+    <ClCompile Include="AIActionData.cpp" />
+    <ClCompile Include="AICondition.cpp" />
+    <ClCompile Include="AICondition_CheckAreaRange.cpp" />
+    <ClCompile Include="AICondition_CheckTargetRange.cpp" />
+    <ClCompile Include="AICondition_Random.cpp" />
+    <ClCompile Include="AICondition_SearchAttackTarget.cpp" />
+    <ClCompile Include="AIConditoin_CheckTargetStates.cpp" />
+    <ClCompile Include="AIExcute.cpp" />
+    <ClCompile Include="AIExecute_RunAIAction.cpp" />
+    <ClCompile Include="AIExecute_RunTimer.cpp" />
+    <ClCompile Include="AIExecute_SetActionIndex.cpp" />
+    <ClCompile Include="AIExecute_SetSkillTimer.cpp" />
+    <ClCompile Include="FrameEventAttackBow.cpp" />
+    <ClCompile Include="FrameEventAttackRange.cpp" />
+    <ClCompile Include="FrameEventCameraShake.cpp" />
+    <ClCompile Include="FrameEventDefine.cpp" />
+    <ClCompile Include="ActionFunction.cpp" />
+    <ClCompile Include="FrameEvent.cpp" />
+    <ClCompile Include="FrameEventAttackNormal.cpp" />
+    <ClCompile Include="FrameEventEffect.cpp" />
+    <ClCompile Include="FrameEventSkill.cpp" />
+    <ClCompile Include="FrameEventSound.cpp" />
+    <ClCompile Include="FrameEventSwordTrail.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RXML\RXML.vcxproj">
+      <Project>{881e7f59-a95b-4180-8224-2d19a82d724b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

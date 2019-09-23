@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="FrameEvent">
+      <UniqueIdentifier>{cec7c825-12df-4ac2-853f-69fe8df0b0ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AICondition">
+      <UniqueIdentifier>{3f6c216b-4cec-43d7-a2d3-2e33ef7dc513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIExcute">
+      <UniqueIdentifier>{3fde2a96-0be8-4aa0-8da9-0feaed725ca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIActionChart">
+      <UniqueIdentifier>{9b832f4c-d719-480a-a87e-91666691d7ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionContantable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionDataInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionBackGroundBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventAttackNormal.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEvent.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventCameraShake.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventDefine.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventAttackRange.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventAttackBow.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventSwordTrail.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventEffect.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventSound.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameEventSkill.h">
+      <Filter>FrameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="AICondition_SearchAttackTarget.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AICondition_Random.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AICondition.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AICondition_CheckTargetRange.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AIConditoin_CheckTargetStates.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AICondition_CheckAreaRange.h">
+      <Filter>AICondition</Filter>
+    </ClInclude>
+    <ClInclude Include="AIExcute.h">
+      <Filter>AIExcute</Filter>
+    </ClInclude>
+    <ClInclude Include="AIExecute_RunAIAction.h">
+      <Filter>AIExcute</Filter>
+    </ClInclude>
+    <ClInclude Include="AIExecute_RunTimer.h">
+      <Filter>AIExcute</Filter>
+    </ClInclude>
+    <ClInclude Include="AIExecute_SetActionIndex.h">
+      <Filter>AIExcute</Filter>
+    </ClInclude>
+    <ClInclude Include="AIExecute_SetSkillTimer.h">
+      <Filter>AIExcute</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart_Wait.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart_WalkRandom.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart_RunTarget.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart_RotationTarget.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart_Attack.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+    <ClInclude Include="AIActionChart.h">
+      <Filter>AIActionChart</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionContantable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionDataInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionBackGroundBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventAttackNormal.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEvent.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventCameraShake.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventDefine.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventAttackRange.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventAttackBow.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventSwordTrail.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventEffect.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventSound.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameEventSkill.cpp">
+      <Filter>FrameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AICondition_SearchAttackTarget.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AICondition.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AICondition_Random.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AICondition_CheckTargetRange.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AIConditoin_CheckTargetStates.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AICondition_CheckAreaRange.cpp">
+      <Filter>AICondition</Filter>
+    </ClCompile>
+    <ClCompile Include="AIExcute.cpp">
+      <Filter>AIExcute</Filter>
+    </ClCompile>
+    <ClCompile Include="AIExecute_RunAIAction.cpp">
+      <Filter>AIExcute</Filter>
+    </ClCompile>
+    <ClCompile Include="AIExecute_RunTimer.cpp">
+      <Filter>AIExcute</Filter>
+    </ClCompile>
+    <ClCompile Include="AIExecute_SetActionIndex.cpp">
+      <Filter>AIExcute</Filter>
+    </ClCompile>
+    <ClCompile Include="AIExecute_SetSkillTimer.cpp">
+      <Filter>AIExcute</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart_Wait.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart_WalkRandom.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart_RunTarget.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart_RotationTarget.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart_Attack.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+    <ClCompile Include="AIActionChart.cpp">
+      <Filter>AIActionChart</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
